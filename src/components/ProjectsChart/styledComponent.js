@@ -5,6 +5,9 @@ export const MainContainer = styled.div`
   align-items: center;
   justify-content: space-around;
   width: 100%;
+  @media (max-width:768px){
+    display:none;
+  }
 `;
 export const ChartContainer = styled.div`
   width: 100%;
