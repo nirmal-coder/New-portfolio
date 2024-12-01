@@ -176,7 +176,7 @@ const Certificate = () => {
       <Container isDark={isDark}>
         <h2>Certificates</h2>
         <div>
-      <Chrono items={courses} mode={isMobile ? "HORIZONTAL" : "VERTICAL_ALTERNATING"} hideControls={true} key={isDark} scrollable disableToolbar  focusActiveItemOnLoad
+      <Chrono items={courses} mode={isMobile ? "VERTICAL" : "VERTICAL_ALTERNATING"} hideControls={true} key={isDark} scrollable disableToolbar  focusActiveItemOnLoad
         theme={getTheme()}
       >
         
