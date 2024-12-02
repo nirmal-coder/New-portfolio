@@ -12,7 +12,7 @@ export const Navbar = styled.nav`
     right: 0;
     left: 0;
     z-index: 100;
-
+    overflow-x: hidden;
     h1{
         color: ${props => props.isDark ? "#ffffff" : "#111111" } ;
         font-family: playfair display;
