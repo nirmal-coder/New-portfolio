@@ -19,7 +19,7 @@ export const Navbar = styled.nav`
     }
 
     a{
-        color: inherit;
+        color: inherit !important;
         text-decoration: none;
     }
     
@@ -45,7 +45,7 @@ export const ListMd = styled.div`
     display: none;
     justify-content: space-around;
     align-items: center;
-    
+    font-family: jost;
     @media (min-width: 768px) {
         display: flex;
     }
@@ -86,23 +86,43 @@ export const ShowNavItems = styled.div`
 `;
 
 export const SmallNavItems = styled.ul`
-    width: 100%;
+    width: 50%;
+    background-color:${props => props.isDark ? "#111111" : "#ffffff"} ;
   list-style: none;
   padding-left: 0;
-  display: ${props => props.isSelected ? "flex" : "none"};;
+  display: ${props => props.isSelected ? "flex" : "none"};
+  flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  background-color: transparent;
   position: fixed;
   top: 60px;
-  right: 0;
-  left: 0;
+  
+  left: 50vw;
+  right: 10vw;
   z-index: 102;
   transition-duration: 1s;
+  border: 1px solid yellow;
+  margin-right: 20px;
+
 
   color: ${props => props.isDark ? "#ffffff" : "#111111" } ;
 
   @media (min-width:768px){
     display: none;
+  }
+
+  li{
+    background-color:transparent ;
+    padding: 5px 10px;
+    color: ${props => props.isDark ? "#ffffff" : "#111111" } ;
+    
+    flex-shrink: 1;
+    
+  }
+  li a{
+    color: ${props => props.isDark ? "#ffffff" : "#111111" } ;
+    text-decoration: none;
+    font-weight: 700;
+    font-family: jost;
   }
 `;

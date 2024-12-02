@@ -5,6 +5,12 @@ import {  BiChevronsDown, BiChevronsUp } from "react-icons/bi";
 import {ListMd, ListSm,Navbar, NavButton, SmallNavItems, ThemeButton } from "./styledComponent"
 
 import ThemeContext from '../../ThemeContext';
+import { SquareBtn1 } from '../Button/styledComponent';
+import { NavItemContainer } from '../Button';
+import AOS from 'aos';
+import 'aos/dist/aos.css'; // You can also use <link> for styles
+// ..
+AOS.init();
 
 const Header = () => {
     const { isDark, changeTheme } = useContext(ThemeContext);
@@ -21,7 +27,12 @@ const Header = () => {
   return (
     
     <>
-    <Navbar isDark={isDark}>
+    <Navbar isDark={isDark} data-aos="fade-down"
+    data-aos-duration="1000"
+    data-aos-easing="ease-in-out"
+    data-aos-mirror="false"
+    data-aos-once="true"
+>
         
         <ListSm>
         <h1><a href="#home">NK</a>
@@ -48,7 +59,10 @@ const Header = () => {
             </ul>
         </ListMd>
     </Navbar>
-    <SmallNavItems isDark={isDark} isSelected={nav}>
+    <NavItemContainer isDark={isDark} isSelected={nav}>
+        <li>
+            <a href="#home">Home</a>
+        </li>
         <li>
             <a href="#Skills">Skills</a>
         </li>
@@ -58,7 +72,8 @@ const Header = () => {
         <li>
         <a href="#Certificate">Certificates</a>
         </li>
-    </SmallNavItems>
+    </NavItemContainer>
+   
     </>
   )
 }

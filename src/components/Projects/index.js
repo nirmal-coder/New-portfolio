@@ -242,16 +242,23 @@ const Projects = () => {
     slidesToShow: 1,
     slidesToScroll: 1
   };
+
+  
   return (
     <MainContainer isDark={isDark} id="Projects">
-      <Container isDark={isDark}>
+      <Container isDark={isDark} data-aos="fade-right"
+    data-aos-duration="500"
+    data-aos-easing="ease-out"
+    data-aos-mirror="true"
+    data-aos-once="false"
+    data-aos-anchor-placement="top-bottom">
       <h2>Projects</h2>
       <CustomSlider className="slider-container" isDark={isDark}>
       <Slider {...settings}>
         {projects.map(each => (
           <Popup modal trigger={<div key={each.id} onMouseEnter={handleMouseEnter}
           onMouseLeave={handleMouseLeave} className='slideItem' onOpen={() => setPopupOpen(true)}
-          onClose={() => setPopupOpen(false)}>
+          onClose={() => setPopupOpen(false)} >
           <video width="100%" height="100%" muted onClick={()=> changeClicked(each.id -1)}>
           <source src={each.video} type="video/mp4" />
           Your browser does not support the video.
@@ -261,18 +268,43 @@ const Projects = () => {
           {close =>
             (
               <PopupContainer>
-              <Slider {...settingInside}>
+              <Slider key={clickedProject} {...settingInside}>
                   {getRotatedArray().map(each => (
                     <DetailsContainer key={each.id} width="100%" height="100%" isDark={isDark} >
                     <ImageContainer>
-                    <img src={each.image} alt={each.title} />
+                    <img src={each.image} alt={each.title} data-aos="fade-right"
+    data-aos-duration="500"
+    data-aos-easing="ease-out"
+    data-aos-mirror="true"
+    data-aos-once="false"
+    data-aos-anchor-placement="top-center"/>
                   
-                      <ProjectsChart id={each.id -1} className="project-chart"/>
+                      <ProjectsChart id={each.id -1} className="project-chart" data-aos="fade-left"
+    data-aos-duration="500"
+    data-aos-easing="ease-out"
+    data-aos-mirror="true"
+    data-aos-once="false"
+    data-aos-anchor-placement="top-center"/>
                  
                     </ImageContainer>
-                    <h2>{each.title}</h2>
-                    <p>{each.description}</p>
-                    <div className='btn-con'>
+                    <h2 data-aos="fade-right"
+    data-aos-duration="500"
+    data-aos-easing="ease-out"
+    data-aos-mirror="true"
+    data-aos-once="false"
+    data-aos-anchor-placement="top-bottom">{each.title}</h2>
+                    <p data-aos="fade-right"
+    data-aos-duration="500"
+    data-aos-easing="ease-out"
+    data-aos-mirror="true"
+    data-aos-once="false"
+    data-aos-anchor-placement="top-bottom">{each.description}</p>
+                    <div className='btn-con' data-aos="fade-up"
+    data-aos-duration="500"
+    data-aos-easing="ease-out"
+    data-aos-mirror="true"
+    data-aos-once="false"
+    data-aos-anchor-placement="top-bottom">
                       <SquareBtn>
                           <a href={each.link} target="_blank" rel="noopener noreferrer">Live Link <HiExternalLink /></a>
                             

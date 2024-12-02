@@ -1,12 +1,28 @@
-import React, { useContext } from 'react'
+
+import React, { useContext, useState } from 'react'
+
 import { Container, Description, MainContainer, Tabs } from "./styledComponent"
 import { FaGraduationCap } from "react-icons/fa";
+
 import ThemeContext from '../../ThemeContext'
+import AOS from 'aos';
+import 'aos/dist/aos.css'; // You can also use <link> for styles
+// ..
+AOS.init();
+
+
 const Education = () => {
   const {isDark} = useContext(ThemeContext);
+  
+  
   return (
     <MainContainer isDark={isDark}>
-      <Container isDark={isDark}>
+      <Container isDark={isDark} data-aos="fade-up"
+    data-aos-duration="500"
+    data-aos-easing="linear"
+    data-aos-mirror="true"
+    data-aos-once="false"
+   >
         <h2>Education</h2>
         
           <Tabs isDark={isDark} >

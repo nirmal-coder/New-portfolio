@@ -258,3 +258,70 @@ export const SquareBtn1 = styled.button`
   outline: none;
   
 `;
+
+export const NavWrapper = styled.div`
+  width: 50%;
+  padding: 2px;
+  margin-right: 16px;
+  display: ${props => props.isSelected  ? "flex" : "none"};;
+  justify-content: center;
+  align-items: center;
+  padding: 1px;
+  border-radius: 10px;
+  position: fixed;
+  top: 70px;
+  right: 10px;
+  transition: box-shadow 0.3s ease-in-out;
+  outline: none;
+  z-index: 10000000000;
+  background: linear-gradient(
+    to top,
+    #9358f7 0%,
+    #9259f7 7%,
+    #8e5df6 13%,
+    #8862f5 20%,
+    #806bf4 27%,
+    #7575f2 33%,
+    #6882f0 40%,
+    #5990ee 47%,
+    #4a9feb 53%,
+    #3bade9 60%,
+    #2ebae7 67%,
+    #23c4e5 73%,
+    #1bcde4 80%,
+    #15d2e3 87%,
+    #11d6e2 93%,
+    #10d7e2 100%
+  );
+`;
+
+
+export const NavItem = styled.ul`
+position: relative;
+width: calc(100% - 2px);
+  font-size: 1rem;
+  font-weight: 700;
+  padding: 5px 15px;
+  border-radius: 10px;
+  background-color: ${props => props.isDark ?  "#111111" : "#ffffff"};
+  color: ${props => props.isDark ? "#ffffff" : "#111111"};
+  border: 2px solid transparent;
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  justify-content: center; 
+  list-style: none;
+  padding-left: 0px;
+
+  li{
+    margin: 10px;
+  }
+
+  li a{
+    color: ${props => props.isDark ? "#ffffff" : "#111111"};
+    text-decoration: none;
+  }
+
+  
+  
+`;

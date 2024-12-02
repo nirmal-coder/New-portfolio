@@ -7,12 +7,23 @@ import { BsGithub } from 'react-icons/bs'
 import { MdEmail } from 'react-icons/md'
 import { FaLinkedin } from 'react-icons/fa'
 
+import AOS from 'aos';
+import 'aos/dist/aos.css'; // You can also use <link> for styles
+// ..
+AOS.init();
+
+
 const Footer = () => {
     const {isDark} = useContext(ThemeContext)
   return (
-    <FooterContainer isDark={isDark}>
-        <ButtonContainer>
-      <Button1>
+    <FooterContainer isDark={isDark} >
+        <ButtonContainer data-aos="fade-left"
+    data-aos-duration="1000"
+    data-aos-easing="ease-out"
+    data-aos-mirror="true"
+    data-aos-once="false"
+    data-aos-anchor-placement="top-bottom">
+      <Button1 >
         <a href="https://www.linkedin.com/in/nirmal-kumarv/" target="_blank" rel="noopener noreferrer">
           <FaLinkedin />
         </a>

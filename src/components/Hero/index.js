@@ -6,12 +6,21 @@ import { FaLinkedin } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 import { BsGithub } from "react-icons/bs";
 import { IoDocumentSharp } from 'react-icons/io5';
+import AOS from 'aos';
+import 'aos/dist/aos.css'; // You can also use <link> for styles
+// ..
+AOS.init();
 
 const Hero = () => {
     const { isDark} = useContext(ThemeContext);
   return (
     <HeroContainer isDark={isDark} id="home" >
-        <Container isDark={isDark}>
+        <Container isDark={isDark} data-aos="fade-right"
+    data-aos-duration="1000"
+    data-aos-easing="ease-in-out"
+    data-aos-mirror="true"
+    data-aos-once="true"
+    data-aos-anchor-placement="top-center">
             <p>Hey 👋,I'm</p>
             <h1> Nirmal Kumar</h1>
 

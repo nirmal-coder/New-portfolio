@@ -1,5 +1,5 @@
 import React, { useContext } from 'react'
-import { ButtonWrapper1, ButtonWrapper2, ButtonWrapper3, ButtonWrapper4, HireMeButton , ButtonWrapper5 ,SquareBtn1 } from './styledComponent'
+import { ButtonWrapper1, ButtonWrapper2, ButtonWrapper3, ButtonWrapper4, HireMeButton , ButtonWrapper5 ,SquareBtn1, NavWrapper, NavItem } from './styledComponent'
 import ThemeContext from '../../ThemeContext'
 
 
@@ -51,5 +51,15 @@ export const SquareBtn =({children ,props})=>{
     <ButtonWrapper5 >
             <SquareBtn1 isDark={isDark}>{children}</SquareBtn1>
                 </ButtonWrapper5>
+  )
+}
+
+export const NavItemContainer =({ children, isSelected, ...props })=>{
+  const {isDark} = useContext(ThemeContext);
+  console.log("navprops : " , isSelected)
+  return (
+    <NavWrapper isDark={isDark} isSelected={isSelected}>
+            <NavItem isDark={isDark}>{children}</NavItem>
+                </NavWrapper>
   )
 }

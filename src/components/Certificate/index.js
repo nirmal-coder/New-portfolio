@@ -172,8 +172,13 @@ const Certificate = () => {
   
   
   return (
-    <MainContainer isDark={isDark} id="Certificate">
-      <Container isDark={isDark}>
+    <MainContainer isDark={isDark} id="Certificate" >
+      <Container isDark={isDark} data-aos="fade-up"
+    data-aos-duration="500"
+    data-aos-easing="ease-out"
+    data-aos-mirror="true"
+    data-aos-once="false"
+    data-aos-anchor-placement="top-bottom">
         <h2>Certificates</h2>
         <div>
       <Chrono items={courses} mode={isMobile ? "VERTICAL" : "VERTICAL_ALTERNATING"} hideControls={true} key={isDark} scrollable disableToolbar  focusActiveItemOnLoad
