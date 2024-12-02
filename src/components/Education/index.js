@@ -1,5 +1,5 @@
 
-import React, { useContext, useState } from 'react'
+import React, { useContext} from 'react'
 
 import { Container, Description, MainContainer, Tabs } from "./styledComponent"
 import { FaGraduationCap } from "react-icons/fa";

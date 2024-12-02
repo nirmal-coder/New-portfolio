@@ -2,10 +2,9 @@ import React, { useContext , useState} from 'react'
 import { MdLightMode } from "react-icons/md";
 import { IoMoonSharp  } from "react-icons/io5";
 import {  BiChevronsDown, BiChevronsUp } from "react-icons/bi";
-import {ListMd, ListSm,Navbar, NavButton, SmallNavItems, ThemeButton } from "./styledComponent"
+import {ListMd, ListSm,Navbar, NavButton, ThemeButton } from "./styledComponent"
 
 import ThemeContext from '../../ThemeContext';
-import { SquareBtn1 } from '../Button/styledComponent';
 import { NavItemContainer } from '../Button';
 import AOS from 'aos';
 import 'aos/dist/aos.css'; // You can also use <link> for styles
