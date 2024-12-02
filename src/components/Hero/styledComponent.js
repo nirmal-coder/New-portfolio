@@ -9,7 +9,6 @@ export const HeroContainer = styled.div`
     justify-content: center;
     align-items: center;
     padding-top: 90px;
-
     @media (min-width: 768px){
       min-height: 90vh;
     }
@@ -81,6 +80,5 @@ export const ButtonContainer = styled.div`
   }
   a{
     color: inherit;
-
   }
 `;

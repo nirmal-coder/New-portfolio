@@ -35,7 +35,7 @@ export const ButtonWrapper1 = styled.div`
     box-shadow: 0 0 20px 5px #9358f7, 
               0 0 25px 10px #9259f7, 
               0 0 30px 15px #10d7e2;
-    scale: 1.1; 
+    transform: scale(1.1);
   }
 
   &:focus{
@@ -270,7 +270,7 @@ export const NavWrapper = styled.div`
   border-radius: 10px;
   position: fixed;
   top: 70px;
-  right: 10px;
+  right: 0;
   transition: box-shadow 0.3s ease-in-out;
   outline: none;
   z-index: 10000000000;
@@ -322,6 +322,6 @@ width: calc(100% - 2px);
     text-decoration: none;
   }
 
-  
+
   
 `;

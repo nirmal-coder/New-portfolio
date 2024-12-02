@@ -9,6 +9,11 @@ import Projects from './components/Projects/index.js';
 import Certificate from './components/Certificate/index.js';
 import Footer from './components/Footer/index.js';
 
+import AOS from 'aos';
+import 'aos/dist/aos.css'; // You can also use <link> for styles
+// ..
+AOS.init();
+
 
 const App = () => {
   const [isDark , setTheme] = useState(true)

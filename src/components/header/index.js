@@ -48,7 +48,7 @@ const Header = () => {
         <ListMd isDark={isDark}>
             <h1><a href="#home">NK</a></h1>
             <ul>
-            <li><a href="#Skills">Skills</a></li>
+            <li><a href="#Skills" >Skills</a></li>
             <li><a href="#Projects">Projects</a></li>
             <li><a href="#Certificate">Certificate</a></li>
             
