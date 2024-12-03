@@ -6,10 +6,6 @@ import {ListMd, ListSm,Navbar, NavButton, ThemeButton } from "./styledComponent"
 
 import ThemeContext from '../../ThemeContext';
 import { NavItemContainer } from '../Button';
-import AOS from 'aos';
-import 'aos/dist/aos.css'; // You can also use <link> for styles
-// ..
-AOS.init();
 
 const Header = () => {
     const { isDark, changeTheme } = useContext(ThemeContext);

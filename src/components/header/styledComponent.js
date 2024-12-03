@@ -12,7 +12,7 @@ export const Navbar = styled.nav`
     right: 0;
     left: 0;
     z-index: 100;
-    overflow-x: hidden;
+    box-sizing: border-box;
     h1{
         color: ${props => props.isDark ? "#ffffff" : "#111111" } ;
         font-family: playfair display;
@@ -27,13 +27,15 @@ export const Navbar = styled.nav`
 
 export const ListSm = styled.ul`
     width: 100%;
+    max-width: 100%;
     height:90%;
     display: flex;
     justify-content: space-around;
     align-items: center;
     list-style: none;
     padding-left: 0px;
-
+    flex-shrink: 1;
+    flex-wrap: wrap; 
     @media (min-width: 767px) {
         display: none;
     }
@@ -41,11 +43,13 @@ export const ListSm = styled.ul`
 
 export const ListMd = styled.div`
     width: 100%;
+    max-width: 100%;
     height:90%;
     display: none;
     justify-content: space-around;
     align-items: center;
     font-family: jost;
+    flex-shrink: 1;
     @media (min-width: 768px) {
         display: flex;
     }
@@ -85,44 +89,3 @@ export const ShowNavItems = styled.div`
   background-color: #111111;
 `;
 
-export const SmallNavItems = styled.ul`
-    width: 50%;
-    background-color:${props => props.isDark ? "#111111" : "#ffffff"} ;
-  list-style: none;
-  padding-left: 0;
-  display: ${props => props.isSelected ? "flex" : "none"};
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
-  position: fixed;
-  top: 60px;
-  
-  left: 50vw;
-  right: 10vw;
-  z-index: 102;
-  transition-duration: 1s;
-  border: 1px solid yellow;
-  margin-right: 20px;
-
-
-  color: ${props => props.isDark ? "#ffffff" : "#111111" } ;
-
-  @media (min-width:768px){
-    display: none;
-  }
-
-  li{
-    background-color:transparent ;
-    padding: 5px 10px;
-    color: ${props => props.isDark ? "#ffffff" : "#111111" } ;
-    
-    flex-shrink: 1;
-    
-  }
-  li a{
-    color: ${props => props.isDark ? "#ffffff" : "#111111" } ;
-    text-decoration: none;
-    font-weight: 700;
-    font-family: jost;
-  }
-`;

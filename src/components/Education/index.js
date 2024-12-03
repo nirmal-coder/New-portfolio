@@ -5,10 +5,6 @@ import { Container, Description, MainContainer, Tabs } from "./styledComponent"
 import { FaGraduationCap } from "react-icons/fa";
 
 import ThemeContext from '../../ThemeContext'
-import AOS from 'aos';
-import 'aos/dist/aos.css'; // You can also use <link> for styles
-// ..
-AOS.init();
 
 
 const Education = () => {
@@ -19,7 +15,7 @@ const Education = () => {
     <MainContainer isDark={isDark}>
       <Container isDark={isDark} data-aos="fade-up"
     data-aos-duration="500"
-    data-aos-easing="linear"
+    data-aos-easing="ease-in"
     data-aos-mirror="true"
     data-aos-once="false"
    >

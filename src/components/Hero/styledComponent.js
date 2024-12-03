@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const HeroContainer = styled.div`
-    width:100%;
+    max-width:100vw !important;
     min-height: 60vh;
     background-color: ${props => props.isDark ? "#111111" : "#ffffff"};;
     display: flex;

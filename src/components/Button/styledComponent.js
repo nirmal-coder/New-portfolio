@@ -273,7 +273,7 @@ export const NavWrapper = styled.div`
   right: 0;
   transition: box-shadow 0.3s ease-in-out;
   outline: none;
-  z-index: 10000000000;
+  z-index: 10000;
   background: linear-gradient(
     to top,
     #9358f7 0%,
@@ -297,7 +297,7 @@ export const NavWrapper = styled.div`
 
 
 export const NavItem = styled.ul`
-position: relative;
+
 width: calc(100% - 2px);
   font-size: 1rem;
   font-weight: 700;

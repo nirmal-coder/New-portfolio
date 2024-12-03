@@ -28,12 +28,7 @@ const Skills = () => {
         <h2>Skills</h2>
         <Container isDark={isDark}>
             
-            <ChartContainer data-aos="fade-right"
-    data-aos-duration="500"
-    data-aos-easing="ease-out"
-    data-aos-mirror="true"
-    data-aos-once="false"
-    data-aos-anchor-placement="top-bottom">
+            <ChartContainer>
             <ResponsiveContainer width="100%" height="100%">
             <PieChart>
       <Pie
@@ -55,12 +50,7 @@ const Skills = () => {
     </PieChart>
             </ResponsiveContainer>
             </ChartContainer>
-            <LegendContainer data-aos="fade-left"
-    data-aos-duration="500"
-    data-aos-easing="ease-out"
-    data-aos-mirror="true"
-    data-aos-once="false"
-    data-aos-anchor-placement="top-bottom">
+            <LegendContainer>
           {skillsData.map((entry, index) => (
             <LegendItem key={entry.skill} isDark={isDark}>
               <ColorBox color={COLORS[index % COLORS.length]} />

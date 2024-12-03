@@ -17,12 +17,7 @@ const Footer = () => {
     const {isDark} = useContext(ThemeContext)
   return (
     <FooterContainer isDark={isDark} >
-        <ButtonContainer data-aos="fade-left"
-    data-aos-duration="1000"
-    data-aos-easing="ease-out"
-    data-aos-mirror="true"
-    data-aos-once="false"
-    data-aos-anchor-placement="top-bottom">
+        <ButtonContainer >
       <Button1 >
         <a href="https://www.linkedin.com/in/nirmal-kumarv/" target="_blank" rel="noopener noreferrer">
           <FaLinkedin />
