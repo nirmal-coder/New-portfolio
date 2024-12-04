@@ -66,7 +66,6 @@ export const PopupContainer = styled.div`
 export const DetailsContainer = styled.div`
   height: 100%;
   width: 90%;
-  overflow-y: scroll;
   background-color: ${props => props.isDark ? "#111111" : "#ffffff"};
   color: ${props => props.isDark ? "#ffffff" : "#111111"};
   z-index: 2;

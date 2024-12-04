@@ -114,7 +114,9 @@ const Projects = () => {
       // Cleanup in case the component unmounts
       document.body.style.overflow = 'unset';
     };
-  }, [isPopupOpen]);
+  }, [isPopupOpen , clickedProject]);
+
+  
 
   const handleMouseEnter = (event) => {
     const video = event.currentTarget.querySelector('video');
@@ -240,7 +242,7 @@ const Projects = () => {
     infinite: true,
     speed: 500,
     slidesToShow: 1,
-    slidesToScroll: 1
+    slidesToScroll: 1,
   };
 
   
@@ -259,7 +261,7 @@ const Projects = () => {
           <Popup modal trigger={<div key={each.id} onMouseEnter={handleMouseEnter}
           onMouseLeave={handleMouseLeave} className='slideItem' onOpen={() => setPopupOpen(true)}
           onClose={() => setPopupOpen(false)} >
-          <video width="100%" height="100%" muted onClick={()=> changeClicked(each.id -1)}>
+          <video preload="metadata" width="100%" height="100%" muted onClick={()=> changeClicked(each.id -1)}>
           <source src={each.video} type="video/mp4" />
           Your browser does not support the video.
         </video>
@@ -277,7 +279,7 @@ const Projects = () => {
     data-aos-easing="ease-out"
     data-aos-mirror="true"
     data-aos-once="false"
-    data-aos-anchor-placement="top-center"/>
+    data-aos-anchor-placement="top-bottom"/>
                   
                       <ProjectsChart id={each.id -1} className="project-chart" data-aos="fade-left"
     data-aos-duration="500"

@@ -6,6 +6,7 @@ import {ListMd, ListSm,Navbar, NavButton, ThemeButton } from "./styledComponent"
 
 import ThemeContext from '../../ThemeContext';
 import { NavItemContainer } from '../Button';
+import AOS from 'aos';
 
 const Header = () => {
     const { isDark, changeTheme } = useContext(ThemeContext);
@@ -14,19 +15,24 @@ const Header = () => {
     const change = ()=>{
         console.log("clicked")
         changeTheme()
+        setTimeout(() => {
+            AOS.refresh();
+          },0);
     }
 
     const onClickNav = ()=>{
         toggleNav((prev) => !prev)
     }
+
   return (
     
     <>
     <Navbar isDark={isDark} data-aos="fade-down"
     data-aos-duration="1000"
     data-aos-easing="ease-in-out"
-    data-aos-mirror="false"
-    data-aos-once="true"
+    data-aos-mirror="true"
+    data-aos-once="false"
+    data-aos-anchor-placement="top-bottom"
 >
         
         <ListSm>
@@ -56,16 +62,16 @@ const Header = () => {
     </Navbar>
     <NavItemContainer isDark={isDark} isSelected={nav}>
         <li>
-            <a href="#home">Home</a>
+            <a href="#home" onClick={onClickNav}>Home</a>
         </li>
         <li>
-            <a href="#Skills">Skills</a>
+            <a href="#Skills" onClick={onClickNav}>Skills</a>
         </li>
         <li>
-        <a href="#Projects">Projects</a>
+        <a href="#Projects" onClick={onClickNav}>Projects</a>
         </li>
         <li>
-        <a href="#Certificate">Certificates</a>
+        <a href="#Certificate" onClick={onClickNav}>Certificates</a>
         </li>
     </NavItemContainer>
    

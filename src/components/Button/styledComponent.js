@@ -311,6 +311,7 @@ width: calc(100% - 2px);
   align-items: center; 
   justify-content: center; 
   list-style: none;
+  transition: box-shadow 0.3s ease-in-out;
   padding-left: 0px;
 
   li{
